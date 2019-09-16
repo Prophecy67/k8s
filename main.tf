@@ -7,12 +7,10 @@ module "eks" {
   cluster_name                    = "my-cluster"
   cluster_endpoint_private_access = "true"
 
-  subnets = [
-    data.terraform_remote_state.vpc.outputs.aws_subnet_jenkins-subnet-eu-west-1a,
-    data.terraform_remote_state.vpc.outputs.aws_subnet_jenkins-subnet-eu-west-1b,
+  subnets = ["10.0.0.1", "10.0.1.0"
   ]
 
-  vpc_id = data.terraform_remote_state.vpc.outputs.aws_vpc_vpc-jenkins
+  vpc_id = "test"
 
   worker_groups = [
     {
