@@ -2,6 +2,7 @@ module "eks" {
   source                          = "terraform-aws-modules/eks/aws"
   cluster_name                    = "my-cluster"
   cluster_endpoint_private_access = "true"
+  region = "eu-west-1"
 
   subnets = ["10.0.0.1", "10.0.1.0"
   ]
