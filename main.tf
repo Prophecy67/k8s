@@ -1,7 +1,7 @@
 provider "aws" {
   region = "eu-west-1"
-  access_key = ""
-  secret_key = ""
+  access_key = "xxx"
+  secret_key = "xxx"
   }
 
 module "eks" {
