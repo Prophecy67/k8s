@@ -9,7 +9,7 @@ module "eks" {
   cluster_name                    = "my-cluster"
   cluster_endpoint_private_access = "true"
 
-  subnets = ["10.0.0.1", "10.0.1.0"
+  subnets = ["10.0.0.1", "10.0.1.1"
   ]
 
   vpc_id = "test"
